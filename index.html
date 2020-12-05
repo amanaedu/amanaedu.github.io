@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>نظام الاوف لاين</title>
+    <link rel="stylesheet" type="text/css" href="installer.css?fg55hh"/>
+
+
+</head>
+<body>
+<div class="container">
+    <div class="fs-form-wrap" id="fs-form-wrap">
+        <div class="fs-title">
+            <h1>طلب تجديد/تثبيت</h1>
+        </div>
+        <form id="myform" class="fs-form fs-form-full" autocomplete="off" action="" method="post">
+            <p id="done" class="text-center fs-anim-upper" style="display: none; font-size: 2.5em;">
+
+                <strong class="text-center fs-anim-upper" >تمت العملية بنجاح</strong>
+                <br>
+                سيتم معالجة طلبك والتوصل معك..
+            </p>
+            <ol  id="quis" dir="rtl" style=" text-align: right;" class="fs-fields">
+                <li class="ezz">
+                    <p class="fs-field-label fs-anim-upper">
+                        مرحبا بك في
+                        <strong>نظام الاوف لاين</strong> يمكنك الان طلب التجديد او تثبيت النظام من هذه الصفحة ... يرجى
+                        تعبة الحقول التي ستظهر لك.
+                    </p>
+<!--                    <button style="width: 100%;" class="fs-continue2" name="submit" type="submit">ارسال الطلب</button>-->
+<!--                    <button onclick="show('done');" class="fs-continue2 fs-anim-upper" type="button">▲ffffff</button>-->
+<!--                    <button onclick="hide('done');" class="fs-continue2 fs-anim-upper" type="button">▲ffffff</button>-->
+                    <button type="button" class="fs-continue2 ezz222 fs-anim-upper" onclick="next();">طلب تثبيت جديد</button>
+                    <button type="button" class="fs-continue2 ezz222 fs-anim-upper" onclick="next();">طلب تجديد اشتراك</button>
+                </li>
+
+                <li>
+                    <button id="quisBtn2"  style="width: 100%;margin-bottom: 20px" class="fs-submit" name="submit" type="submit">ارسال الطلب</button>
+                    <label class="fs-field-label fs-anim-upper" for="schoolName" data-info="اسم المدرسة التي تعمل فيها">ماهو
+                        اسم مدرستك ؟</label>
+                    <input class="fs-anim-lower" id="schoolName" name="schoolName" type="checkbok"
+                           placeholder="اكتب اسم المدرسة هنا"/>
+                    <button type="button" class="fs-continue2 ezz222 fs-anim-upper" onclick="next();">التالي</button>
+                    <button type="button" class="fs-continue2 ezz222 fs-anim-upper" onclick="back();">السابق</button>
+                </li>
+                <li>
+                    <label class="fs-field-label fs-anim-upper" for="schoolPhone"
+                           data-info="اسم المدرسة التي تعمل فيها">ادخل رقم هاتف للتواصل معك ؟</label>
+                    <input class="fs-anim-lower" id="schoolPhone" name="schoolPhone" type="checkbok"
+                           placeholder="رقم هاتفك"/>
+                    <button type="button" class="fs-continue2 ezz222 fs-anim-upper" onclick="next();">التالي</button>
+                    <button type="button" class="fs-continue2 ezz222 fs-anim-upper" onclick="back();">السابق</button>
+                </li>
+                <li class="ezz">
+                    <label class="fs-field-label fs-anim-upper" data-info="اختر تثبيت او تجديد">نوع الخدمة ؟</label>
+                    <label>
+                        <select name="installType" class="cs-select cs-select2 cs-skin-border fs-anim-lower">
+                            <option value="" disabled selected>اختر النوع</option>
+                            <option value="instell">تثبيت</option>
+                            <option value="active">تجديد</option>
+                            <option value="both">تثبيت وتجديد</option>
+                            <option value="other">غير ذلك</option>
+                        </select>
+                    </label>
+                    <button type="button" class="fs-continue2 ezz222 fs-anim-upper" onclick="next();">التالي</button>
+                    <button type="button" class="fs-continue2 ezz222 fs-anim-upper" onclick="back();">السابق</button>
+                </li>
+                <li>
+                    <label class="fs-field-label fs-anim-upper" for="userName"
+                           data-info="اسم المستخدم او الترميز الخاص بحساب المدرسة">ماهو اسم المستخدم الخاص بالمدرسة (غير
+                        الزامي) ؟</label>
+                    <input class="fs-anim-lower" id="userName" name="userName" type="text"
+                           placeholder="اكتب اسم المستخدم (s130....)"/>
+                    <button type="button" class="fs-continue2 ezz222 fs-anim-upper" onclick="next();">التالي</button>
+                    <button type="button" class="fs-continue2 ezz222 fs-anim-upper" onclick="back();">السابق</button>
+                </li>
+                <li>
+                    <label class="fs-field-label fs-anim-upper" for="note" data-info="اي ملاحظات اخرى">هل لديك ملاحظات
+                        اخرى</label>
+                    <textarea class="fs-anim-lower" id="note" name="note" type="text"
+                              placeholder="اكتبها هنا ..."></textarea>
+                    <button type="button" class="fs-continue2 ezz222 fs-anim-upper" onclick="next();">التالي</button>
+                    <button type="button" class="fs-continue2 ezz222
+                    fs-anim-upper" onclick="back();">السابق</button>
+                </li>
+
+
+            </ol>
+            <button id="quisBtn"  style="width: 100%;" class="fs-submit" name="submit" type="submit">ارسال الطلب</button>
+
+            <button id="quisDone"  onclick="reload();"  style="display: none;width: 100%;" class="fs-submit" name="submit" type="button">عودة</button>
+        </form>
+    </div>
+</div>
+<div class="preloader " id="overlay" style="opacity: 0.9;display: none;">
+    <div class="circular " style="animation:unset;top: unset;left: unset;right: 100px;bottom: 30px;width: auto;">
+        <svg viewBox="25 25 50 50" class="circular " style="top: unset;left: unset;right: unset; bottom: unset;">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
+        </svg>
+        <br>
+        <h1 id="tCText" style="margin-top: .5rem;margin-right: .5rem;color: black;padding-left: 50px;"> .. جاري
+            الارسال</h1>
+    </div>
+</div>
+<script src="installer.js?fgf"></script>
+<script>
+    var ff = null;
+    (function () {
+
+
+        (function () {
+            [].slice.call(document.querySelectorAll('select.cs-select2')).forEach(function (el) {
+                new SelectFx(el);
+            });
+        })();
+        [].slice.call(document.querySelectorAll('select.cs-select1')).forEach(function (el) {
+            new SelectFx(el, {
+                stickyPlaceholder: false,
+                onChange: function (val) {
+                    document.querySelector('span.cs-placeholder').style.backgroundColor = val;
+                }
+            });
+        });
+        var formWrap = document.getElementById('fs-form-wrap');
+        ff = new FForm(formWrap, {
+            onReview: function () {
+                topFunction();
+
+                classie.add(document.body, 'overview');
+            }
+        });
+
+
+    })();
+
+    function next() {
+        ff._nextField();
+    }
+    function back() {
+        if(ff.current>0)
+        ff._nextField(ff.current-1);
+    }
+    function reload() {
+       window.location.reload();
+    }
+
+    (function (window) {
+
+        window.addEventListener("load", function () {
+            function sendData() {
+                showHideLoad();
+                const XHR = new XMLHttpRequest();
+
+                const FD = new FormData(form);
+
+                XHR.addEventListener("load", function (event) {
+                    showHideLoad(1);
+                    let data = {};
+                    if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                            try{
+                              data=  JSON.parse(XHR.responseText);
+                              if(data.status){
+                                  if(data.status==="success"){
+                                      show('done');
+                                      hide('quis');
+                                      hide('quisBtn');
+                                      show('quisDone');
+                                      hide('quisBtn2');
+                                  }else {
+                                      alert(data.message);
+                                  }
+                              }
+                            }catch (e){
+                                alert('حصل خطاء حاول في وقت لاحق');
+                            }
+
+
+                        }else {
+                            alert('حصل خطاء حاول في وقت لاحق');
+
+                        }
+
+
+                });
+
+                // Define what happens in case of error
+                XHR.addEventListener("error", function (event) {
+                    showHideLoad(1);
+                    // classie.remove(document.body, 'overview');
+                    topFunction();
+
+                });
+
+                XHR.open("POST", "https://offline-sg.vercel.app/addRequest");
+                XHR.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+
+                let urlEncodedData = "",
+                    urlEncodedDataPairs = [],
+                    name;
+                // Display the key/value pairs
+                for (var pair of FD.entries()) {
+                    urlEncodedDataPairs.push(encodeURIComponent(pair[0]) + '=' + encodeURIComponent(pair[1]));
+                }
+
+
+                // Combine the pairs into a single string and replace all %-encoded spaces to
+                // the '+' character; matches the behaviour of browser form submissions.
+                urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
+                // XHR.send(FD.forEach());
+                XHR.send(urlEncodedData);
+            }
+
+            // Access the form element...
+            const form = document.getElementById("myform");
+
+            // ...and take over its submit event.
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                sendData();
+            });
+        });
+    })(window);
+
+</script>
+<style>
+    .text-center{text-align:center!important}
+    .fs-form-overview .fs-fields::before {
+        display: block;
+        margin-bottom: 0.5em;
+        content: 'تاكيد وارسال';
+    }
+    .fs-form-overview .ezz222 {
+        display: none!important;
+    }
+</style>
+</body>
+</html>
